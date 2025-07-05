@@ -1,0 +1,39 @@
+import { NavLink, Route, Routes } from "react-router-dom";
+import Inicio from "../Inicio";
+import GestorPrimo from "./GestorPrimo";
+
+const Navega = () => {
+
+    return(
+        <main className="container mb-3">
+            <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+                <div className="container-fluid">
+                    <a className="navbar-brand" href="#">Navbar</a>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul className="navbar-nav">
+                            <li className="nav-item">
+                                <NavLink className="nav-link active" aria-current="page" to="/">Inicio</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link" to="numero-primo">Número Primo</NavLink>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <Routes>
+                <Route path="numero-primo" element={<GestorPrimo/>}></Route>
+                <Route path="/" element={<Inicio/>}></Route>
+            </Routes>
+        </main>
+    )
+}
+
+export default Navega;
