@@ -1,6 +1,6 @@
 import { NavLink, Route, Routes } from "react-router-dom";
 import Inicio from "../Inicio";
-import GestorPrimo from "./GestorPrimo";
+import GestorVisorPrimo from "./GestorVisorPrimo";
 
 const Navega = () => {
 
@@ -19,9 +19,11 @@ const Navega = () => {
                                 <NavLink className="nav-link active" aria-current="page" to="/">Inicio</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="numero-primo">Número Primo</NavLink>
+                                <NavLink className="nav-link" to="numero-primo-manual">Número Primo Manual</NavLink>
                             </li>
-
+                            <li className="nav-item">
+                                <NavLink className="nav-link" to="numero-primo-auto-manual">Número Primo Auto y Manual</NavLink>
+                            </li>
 
                         </ul>
                     </div>
@@ -29,7 +31,8 @@ const Navega = () => {
             </nav>
 
             <Routes>
-                <Route path="numero-primo" element={<GestorPrimo/>}></Route>
+                <Route path="numero-primo-manual" element={<GestorVisorPrimo soloManual={true}/>}></Route>
+                <Route path="numero-primo-auto-manual" element={<GestorVisorPrimo soloManual={false}/>}></Route>
                 <Route path="/" element={<Inicio/>}></Route>
             </Routes>
         </main>
