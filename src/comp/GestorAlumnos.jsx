@@ -92,10 +92,7 @@ const GestorAlumnos = () => {
         try {
             let confirma = window.confirm(`Desea eliminar al alumno ${alumno.nombres}?`);
             if (confirma) {
-                await axios.put(`${api}/${alumno.id}`, {
-                    nombres: alumno.nombres,
-                    dni: alumno.dni,
-                    celular: alumno.celular,
+                await axios.patch(`${api}/${alumno.id}`, {
                     estado: 0
                 });
                 obtenerAlumnos();
