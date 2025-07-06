@@ -76,6 +76,20 @@
       "celular": "996585888",
       "estado": 0,
       "id": 11
+    },
+    {
+      "nombres": "Gaby Perez",
+      "dni": "87985458",
+      "celular": "998705000",
+      "estado": 1,
+      "id": 12
+    },
+    {
+      "nombres": "Tandara Gorrion",
+      "dni": "77474775",
+      "celular": "96369000",
+      "estado": 1,
+      "id": 13
     }
   ]
 }

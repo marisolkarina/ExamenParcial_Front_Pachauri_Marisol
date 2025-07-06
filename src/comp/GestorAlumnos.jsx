@@ -117,6 +117,7 @@ const GestorAlumnos = () => {
     }
 
     const alumnosEliminados = alumnos.filter((al) => al.estado === 0);
+    const alumnosVisibles = alumnos.filter((a) => a.estado !== 0);
 
     return (
         <main className="container mt-3">
@@ -152,7 +153,7 @@ const GestorAlumnos = () => {
                             {
                                 (modoEdicion && (
                                     <input type="button" className="btn btn-danger"
-                                        onClick={limpiaFormulario} value="Cancelar"/>
+                                        onClick={limpiaFormulario} value="Cancelar" />
                                 ))
                             }
                         </div>
@@ -163,32 +164,34 @@ const GestorAlumnos = () => {
                 <div className="col-md-8">
                     <div className="row">
                         {
-                            alumnos.map((a) => (
+                            alumnosVisibles.map((a) => (
                                 <div className="col-md-4 mb-3" key={a.id}>
-                                    <div className="card shadow">
-                                        <div className="card-header bg-primary text-white">
-                                            <p className="fw-medium">{a.nombres}</p>
-                                        </div>
-                                        <div className="card-body">
-                                            <p><strong>ID:</strong> {a.id}</p>
-                                            <p><strong>DNI:</strong> {a.dni}</p>
-                                            <p><strong>Celular:</strong> {a.celular}</p>
-                                            <p><strong>Estado:</strong> {
-                                                a.estado === 0 ? 'Eliminado' :
-                                                    a.estado === 1 ? 'Activo' :
-                                                        a.estado === 2 ? 'Retirado' : 'Suspendido'
-                                            }</p>
-                                        </div>
-                                        {
-                                            a.estado !== 0 ? ( // solo si es activo se puede editar/eliminar
+                                    {
+                                        a.estado !== 0 ? (
+                                            <div className="card shadow">
+                                                <div className="card-header bg-primary text-white">
+                                                    <p className="fw-medium">{a.nombres}</p>
+                                                </div>
+                                                <div className="card-body">
+                                                    <p><strong>ID:</strong> {a.id}</p>
+                                                    <p><strong>DNI:</strong> {a.dni}</p>
+                                                    <p><strong>Celular:</strong> {a.celular}</p>
+                                                    <p><strong>Estado:</strong> {
+                                                        a.estado === 0 ? 'Eliminado' :
+                                                            a.estado === 1 ? 'Activo' :
+                                                                a.estado === 2 ? 'Retirado' : 'Suspendido'
+                                                    }</p>
+                                                </div>
+
                                                 <div className="card-footer d-flex justify-content-between">
                                                     <button className="btn btn-warning" onClick={() => editarAlumno(a)}>Editar</button>
                                                     <button className="btn btn-danger" onClick={() => eliminarAlumno(a)}>Eliminar</button>
                                                 </div>
-                                            ) : (<></>)
 
-                                        }
-                                    </div>
+                                            </div>
+                                        ) : (<></>)
+                                    }
+
                                 </div>
                             ))
                         }
