@@ -22,17 +22,17 @@
       "id": 3
     },
     {
-      "id": 4,
       "nombres": "María López",
       "dni": "22334455",
       "celular": "987112233",
-      "estado": 0
+      "estado": 1,
+      "id": 4
     },
     {
       "nombres": "Javier Salas",
       "dni": "33445566",
       "celular": "934567890",
-      "estado": 0,
+      "estado": 1,
       "id": 5
     },
     {
@@ -52,9 +52,30 @@
     {
       "nombres": "Maria Solorzano",
       "dni": "77777777",
-      "celular": "14857263",
-      "estado": 1,
+      "celular": "914857263",
+      "estado": 0,
       "id": 8
+    },
+    {
+      "nombres": "Beto Torrres",
+      "dni": "7778459",
+      "celular": "985746985",
+      "estado": 0,
+      "id": 9
+    },
+    {
+      "nombres": "Susana Jimenez",
+      "dni": "78596584",
+      "celular": "998745866",
+      "estado": 0,
+      "id": 10
+    },
+    {
+      "nombres": "Lorena Cespedes",
+      "dni": "77848878",
+      "celular": "996585888",
+      "estado": 1,
+      "id": 11
     }
   ]
 }
