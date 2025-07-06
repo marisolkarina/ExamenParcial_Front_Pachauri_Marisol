@@ -2,16 +2,17 @@ import { NavLink, Route, Routes } from "react-router-dom";
 import Inicio from "../Inicio";
 import GestorVisorPrimo from "./GestorVisorPrimo";
 import GestorVisorTableroKanban from "./GestorVisorTableroKanban";
+import GestorAlumnos from "./GestorAlumnos";
 
 const Navega = () => {
 
-    return(
+    return (
         <main className="container mb-3">
             <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">Navbar</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+                        <span className="navbar-toggler-icon"></span>
                     </button>
 
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
@@ -25,20 +26,23 @@ const Navega = () => {
                             <li className="nav-item">
                                 <NavLink className="nav-link" to="numero-primo-auto-manual">Número Primo Auto y Manual</NavLink>
                             </li>
-                             <li className="nav-item">
+                            <li className="nav-item">
                                 <NavLink className="nav-link" to="tablero-kanban">Tablero Kanban</NavLink>
                             </li>
-
+                            <li className="nav-item">
+                                <NavLink className="nav-link" to="gestor-alumnos">Gestion Alumnos</NavLink>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </nav>
 
             <Routes>
-                <Route path="numero-primo-manual" element={<GestorVisorPrimo soloManual={true}/>}></Route>
-                <Route path="numero-primo-auto-manual" element={<GestorVisorPrimo soloManual={false}/>}></Route>
-                <Route path="tablero-kanban" element={<GestorVisorTableroKanban/>}></Route>
-                <Route path="/" element={<Inicio/>}></Route>
+                <Route path="numero-primo-manual" element={<GestorVisorPrimo soloManual={true} />}></Route>
+                <Route path="numero-primo-auto-manual" element={<GestorVisorPrimo soloManual={false} />}></Route>
+                <Route path="tablero-kanban" element={<GestorVisorTableroKanban />}></Route>
+                <Route path="gestor-alumnos" element={<GestorAlumnos />}></Route>
+                <Route path="/" element={<Inicio />}></Route>
             </Routes>
         </main>
     )

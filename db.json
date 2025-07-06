@@ -1,0 +1,60 @@
+{
+  "alumnos": [
+    {
+      "nombres": "Carlos Martínez",
+      "dni": "12345678",
+      "celular": "987654301",
+      "id": 1,
+      "estado": 1
+    },
+    {
+      "id": 2,
+      "nombres": "Lucía Fernández",
+      "dni": "87654321",
+      "celular": "912345678",
+      "estado": 1
+    },
+    {
+      "nombres": "Pedro Gómez",
+      "dni": "11223344",
+      "celular": "998877665",
+      "estado": 1,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "nombres": "María López",
+      "dni": "22334455",
+      "celular": "987112233",
+      "estado": 0
+    },
+    {
+      "nombres": "Javier Salas",
+      "dni": "33445566",
+      "celular": "934567890",
+      "estado": 0,
+      "id": 5
+    },
+    {
+      "id": 6,
+      "nombres": "Ana Torres",
+      "dni": "44556677",
+      "celular": "965432100",
+      "estado": 1
+    },
+    {
+      "nombres": "Clara Juarez",
+      "dni": "11114141",
+      "celular": "741741547",
+      "estado": 1,
+      "id": 7
+    },
+    {
+      "nombres": "Maria Solorzano",
+      "dni": "77777777",
+      "celular": "14857263",
+      "estado": 1,
+      "id": 8
+    }
+  ]
+}
