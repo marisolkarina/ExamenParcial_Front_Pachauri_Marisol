@@ -1,5 +1,5 @@
-import VisorTableroKanban from "./VisorTableroKanban";
 import { data } from "../data";
+import VisorTableroKanban from "./VisorTableroKanban";
 
 const GestorVisorTableroKanban = () => {
 

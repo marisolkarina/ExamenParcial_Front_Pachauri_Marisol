@@ -126,6 +126,7 @@ const GestorAlumnos = () => {
 
     return (
         <main className="container mt-3">
+            <p className="fs-3 text-center mt-3">Pregunta 4: Caso Gestión Alumnos</p>
             <div className="row">
                 <div className="col-md-4">
                     <p className="lead fs-2 text-primary">{modoEdicion ? 'Editar Alumno' : 'Registrar Alumno'}</p>
