@@ -109,10 +109,7 @@ const GestorAlumnos = () => {
         try {
             let confirma = window.confirm(`Desea restaurar el alumno ${alumno.nombres}?`);
             if (confirma) {
-                await axios.put(`${api}/${alumno.id}`, {
-                    nombres: alumno.nombres,
-                    dni: alumno.dni,
-                    celular: alumno.celular,
+                await axios.patch(`${api}/${alumno.id}`, {
                     estado: 1
                 });
                 obtenerAlumnos();
